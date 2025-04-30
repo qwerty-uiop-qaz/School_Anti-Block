@@ -44,7 +44,7 @@ $active.Controls.Add($activebtn)
 [void]$form.ShowDialog()
 [void]$active.Showdialog()
 
-if ($env:ACTIVE = "true"){
+if ($env:ACTIVE == "true"){
    $active.show()
    $form.hide()
 } else {
