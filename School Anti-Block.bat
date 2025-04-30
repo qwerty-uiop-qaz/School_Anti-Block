@@ -5,6 +5,7 @@ Color 07
 Title School Anti-Block
 
 powershell -ExecutionPolicy Bypass -File gui.ps1
+set ACTIVE = "true"
 
 Echo.
 call :c 0D "================================" /n
@@ -20,6 +21,11 @@ pause
 :Error
 cls
 :Task
+
+while(%ACTIVE% != "true"){
+  Echo inactive
+}
+
 taskkill /F /im lsproxy.exe
 taskkill /F /im client32.exe
 taskkill /F /im Client32.exe
